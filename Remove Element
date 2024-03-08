@@ -1,0 +1,13 @@
+//In this problem I used built in vector methhod and remove from  <algorithm>.
+//I deleted all occurences of val and returned the first k elements that were not val.
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) 
+    {
+        // Delete occurences of val
+        nums.erase(remove(nums.begin(), nums.end(), val), nums.end());
+
+        // Return size k
+        return nums.size();    
+    }
+}; 
